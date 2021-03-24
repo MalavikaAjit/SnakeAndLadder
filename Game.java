@@ -3,7 +3,8 @@ public class Game {
        
     public static final int InitialPosition = 0;
     public static final int FinalPosition = 100;
-    
+    public static int count=0;
+
     public static int RollADie() {
        Random random = new Random();
        int number = random.nextInt(6)+1;
@@ -28,7 +29,9 @@ public class Game {
                break;
              case 1:
                System.out.println("ladder; the player moves ahead ");
-               position = position + diceNumber;
+               if(position - diceNumber < FinalPosition){
+                   position = position + diceNumber;
+               }
                break; 
              case 2:
                System.out.println("Snake; the player moves backward " );
@@ -38,6 +41,8 @@ public class Game {
                }
                break;
            }
+            count++;
+            System.out.println("dice count is " + count);
             System.out.println("current position" +position);
         }   
    }
