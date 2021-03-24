@@ -28,9 +28,7 @@ public class Game {
                break;
              case 1:
                System.out.println("ladder; the player moves ahead ");
-               if(position - diceNumber < FinalPosition){
-                   position = position + diceNumber;
-               }
+               position = position + diceNumber;
                break; 
              case 2:
                System.out.println("Snake; the player moves backward " );
