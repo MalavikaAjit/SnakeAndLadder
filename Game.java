@@ -53,40 +53,7 @@ public class Game {
 
            
        
-    public static void main(String[] args) {
-        PrintMsg(" welcome to snake and ladder game  ");
-        int count = 0;   
-        int position1=InitialPosition;
-        int position2= InitialPosition;
-        int maxPosition =InitialPosition;
-        
-        while (maxPosition != FinalPosition) {
-            position1 = calPosition(position1 ,"player1");
-
-            //if player1 not reached 100,the player2 plays the game;alternatively  
-            if (position1 != FinalPosition) 
-                position2 = calPosition(position2 ,"player2");
-            
-            //checking the position of players and assigning the greater to max value for condition 
-            if (position1 > position2)
-                maxPosition = position1;
-            else
-                maxPosition = position2;
-            
-            count++;
-            //System.out.println("current position" +position);
-            System.out.println("dice count " + count);
-        }   
-        //deciding the winner
-        if(position1 == FinalPosition)
-            System.out.println("player1 wins" );
-        else 
-            System.out.println("player2 wins");
-        
-        
-    }
-}
-
+    
 
 
             
